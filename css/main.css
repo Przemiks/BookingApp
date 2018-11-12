@@ -28,9 +28,13 @@ body {
   min-height: 70rem; }
 
 .header {
+  font-size: 1.4rem;
   height: 7rem;
   background-color: #fff;
-  border-bottom: #dedede; }
+  border-bottom: 1px solid #dedede;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
 
 .content {
   display: flex; }
@@ -42,3 +46,84 @@ body {
 .hotel-view {
   background-color: #f4f4f4;
   flex: 1; }
+
+.logo {
+  height: 3.25rem;
+  margin-left: 2rem; }
+
+.search {
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .search__input {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 600;
+    color: inherit;
+    background-color: #f2f2f2;
+    border: none;
+    padding: .6rem 2rem;
+    border-radius: 100px;
+    width: 90%;
+    transition: all .3s;
+    margin-right: -3.25rem; }
+    .search__input:focus {
+      outline: none;
+      width: 100%;
+      background-color: #dedede; }
+    .search__input::-webkit-input-placeholder {
+      font-weight: 100;
+      color: #d9d9d9; }
+  .search__input:focus + .search__button {
+    background-color: #dedede; }
+  .search__button {
+    border: none;
+    background-color: #f2f2f2; }
+    .search__button:focus {
+      outline: none; }
+    .search__button:active {
+      transform: translateY(-2px); }
+  .search__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: #999;
+    font-weight: 600; }
+
+.user-nav {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .user-nav > * {
+    padding: 0 2rem;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center; }
+  .user-nav > *:hover {
+    background-color: #dedede; }
+  .user-nav__icon-box {
+    position: relative; }
+  .user-nav__icon {
+    height: 2.25rem;
+    width: 2.25rem;
+    fill: #999; }
+  .user-nav__notification {
+    font-size: .8rem;
+    height: 1.8rem;
+    width: 1.8rem;
+    border-radius: 50%;
+    background-color: #ff004d;
+    color: #fff;
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .user-nav__user-photo {
+    height: 3.75rem;
+    width: 3.75rem;
+    border-radius: 50%;
+    margin-right: 1rem; }
