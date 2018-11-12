@@ -1,7 +1,6 @@
-@include "base";
-@include "layout";
-@include "components";
+@import "base";
+@import "layout";
+@import "components";
 
 
-@include "abstract/_mixins.scss";
-
+@import "abstract/mixins";
