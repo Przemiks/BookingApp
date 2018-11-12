@@ -17,4 +17,28 @@ body {
   line-height: 1.6;
   background-image: linear-gradient(to right bottom, #ff004d, #ba0039);
   background-size: cover;
-  min-height: 100vh; }
+  min-height: 100vh;
+  color: #777; }
+
+.container {
+  max-width: 120rem;
+  margin: 10rem auto;
+  background-color: #d9d9d9;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  min-height: 70rem; }
+
+.header {
+  height: 7rem;
+  background-color: #fff;
+  border-bottom: #dedede; }
+
+.content {
+  display: flex; }
+
+.side_nav {
+  background-color: #333;
+  flex: 0 0 18%; }
+
+.hotel-view {
+  background-color: #f4f4f4;
+  flex: 1; }
