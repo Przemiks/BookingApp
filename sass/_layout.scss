@@ -38,7 +38,7 @@
     font-size: 1.4rem;
     display: flex;
     padding: 4.5rem;
-    background-color: $grey-light1;
+    background-color: $grey-light3;
     border-bottom: 1px solid $grey-light2;
 }
 
@@ -53,4 +53,8 @@
 
 .user-reviews {
     flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
