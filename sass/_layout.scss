@@ -4,7 +4,12 @@
     background-color: $grey-light1;
     box-shadow: 0 2rem 6rem rgba(0, 0, 0, .3);
 
-    min-height: 70rem;
+
+    @media only screen and (max-width: $break-largest) {
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+    }
 }
 
 .header {
@@ -15,10 +20,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media only screen and (max-width: $break-small) {
+        flex-wrap: wrap;
+        align-content: space-around;
+        height: 10rem;
+    }
 }
 
 .content {
     display: flex;
+
+    @media only screen and (max-width: $break-medium) {
+        flex-direction: column;
+    }
 }
 
 .sidebar {
@@ -40,6 +55,15 @@
     padding: 4.5rem;
     background-color: $grey-light3;
     border-bottom: 1px solid $grey-light2;
+
+    @media only screen and (max-width: $break-medium) {
+        padding: 3rem;
+    }
+
+    @media only screen and (max-width: $break-small) {
+        flex-direction: column;
+    }
+
 }
 
 .description {
@@ -48,6 +72,16 @@
     padding: 3rem;
     flex: 0 0 60%;
     margin-right: 4.5rem;
+
+    @media only screen and (max-width: $break-medium) {
+        padding: 2rem;
+        margin-right: 3rem;
+    }
+
+    @media only screen and (max-width: $break-small) {
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
 
 }
 

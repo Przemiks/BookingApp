@@ -13,6 +13,12 @@
     align-items: center;
     justify-content: center;
 
+    @media only screen and (max-width: $break-small) {
+        order: 1;
+        flex: 0 0 100%;
+        background-color: $grey-light3;
+    }
+
     &__input {
         font-family: inherit;
         font-size: inherit;
@@ -126,11 +132,24 @@
     list-style: none;
     margin-top: 3.5rem;
 
+    @media only screen and (max-width: $break-medium) {
+        display: flex;
+        margin: 0;
+    }
+
     &__item {
         position: relative;
 
         &:not(:last-child) {
             margin-bottom: .8rem;
+
+            @media only screen and (max-width: $break-medium) {
+                margin: 0;
+            }
+        }
+
+        @media only screen and (max-width: $break-medium) {
+            flex: 1;
         }
     }
 
@@ -169,6 +188,16 @@
 
         display: flex;
         align-items: center;
+
+        @media only screen and (max-width: $break-medium) {
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        @media only screen and (max-width: $break-small) {
+            flex-direction: column;
+            padding: 1.2rem;
+        }
     }
 
     &__icon {
@@ -176,6 +205,13 @@
         height: 1.75rem;
         margin-right: 2rem;
         fill: currentColor;
+
+        @media only screen and (max-width: $break-small) {
+            margin-right: 0;
+            margin-bottom: 5px;
+            width: 1.4rem;
+            height: 1.4rem;
+        }
     }
 }
 
@@ -188,6 +224,11 @@
     text-align: center;
     color: $grey;
     padding: 2.5rem;
+
+    @media only screen and (max-width: $break-medium) {
+        display: none;
+        ;
+    }
 }
 
 /////////////////////////////////////////////
@@ -210,17 +251,37 @@
     align-items: center;
     border-bottom: 1px solid $grey-light2;
 
+    &__container {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+
     &__heading {
         font-size: 2.25rem;
         font-weight: 300;
         text-transform: uppercase;
         letter-spacing: 1px;
         padding: 1.5rem 3rem;
+
+        @media only screen and (max-width: $break-small) {
+            font-size: 1.8rem;
+            flex: 0 0 100%;
+            padding: 2rem 2rem 0.5rem 2rem;
+        }
     }
 
     &__star {
+        //flex: 1;
         margin-right: auto;
         display: flex;
+
+        @media only screen and (max-width: $break-small) {
+            margin-right: 0;
+            padding: 0.5rem 2rem 2rem 2rem;
+        }
     }
 
     &__icon-s,
@@ -230,38 +291,56 @@
         fill: $color-primary;
     }
 
-    &__location {
-        font-size: 1.2rem;
-        display: flex;
-        vertical-align: center;
+    &__icon-l {
+        margin-right: .5rem;
     }
 
-    &__icon-l {
-        margin-right: .6rem;
+    &__location {
+        display: flex;
+        align-items: center;
+        font-size: 1.2rem;
+
+        @media only screen and (max-width: $break-small) {
+            padding: 0.5rem 2rem 2rem 2rem;
+        }
     }
 
     &__rating {
         background-color: $color-primary;
-        color: #fff;
         margin-left: 3rem;
+        color: #fff;
         padding: 0 2.25rem;
         align-self: stretch;
+
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        @media only screen and (max-width: $break-small) {
+            padding: 0 2.25rem;
+        }
     }
 
     &__rating-result {
         font-size: 2.25rem;
-        font-weight: 400;
+        font-weight: 300;
         margin-bottom: -3px;
+
+        @media only screen and (max-width: $break-small) {
+            font-size: 2rem;
+        }
     }
 
     &__rating-number {
-        font-size: .9rem;
+        font-size: .8rem;
         text-transform: uppercase;
+
+        @media only screen and (max-width: $break-small) {
+            font-size: 0.7rem;
+        }
     }
+
 }
 
 /////////////////////////////////////////////
@@ -374,7 +453,9 @@
         margin-right: auto;
     }
 
-    &__friens {}
+    &__friens {
+        display: flex;
+    }
 
     &__photo {
         box-sizing: content-box;
@@ -384,7 +465,12 @@
         border: 3px solid #fff;
 
         &:not(:last-child) {
-            margin-right: -1.5rem;
+            margin-right: -2rem;
+        }
+
+        @media only screen and (max-width: $break-medium) {
+            height: 4rem;
+            width: 4rem;
         }
     }
 }
@@ -400,6 +486,11 @@
     margin-bottom: 3.5rem;
     position: relative;
     overflow: hidden;
+
+    @media only screen and (max-width: $break-medium) {
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
 
     &__text {
         margin-bottom: 2rem;
@@ -457,6 +548,10 @@
 .cta {
     padding: 3.5rem 0;
     text-align: center;
+
+    @media only screen and (max-width: $break-medium) {
+        padding: 2.5rem 0;
+    }
 
     &__book-now {
         font-size: 2rem;

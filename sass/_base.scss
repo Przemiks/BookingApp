@@ -1,15 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-
-
 $color-primary: #ff004d;
 $color-secondary: #ff175d; //lighter
 $color-third: #ba0039; //darker
@@ -24,9 +12,34 @@ $grey-dark: #333;
 $grey-dark1: #777; //lighter
 $grey-dark2: #999; //most lighter
 
+
+$break-largest: 75em; //1200px;
+$break-larg: 68.75em; //1100px;
+$break-medium: 56.25em; //900px
+$break-small: 37.5em; //600px
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+
+
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 1rem=10px,  10px/16px = 62.5%
+
+    @media only screen and (max-width: $break-larg) {
+        font-size: 50%;
+    }
 }
 
 body {
